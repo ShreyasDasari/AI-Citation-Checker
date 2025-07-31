@@ -17,9 +17,6 @@ plotly==5.18.0
 # HTTP requests
 requests==2.31.0
 
-# XML parsing for arXiv
-lxml>=4.9.3,<5
-
 # Utilities
 dataclasses-json==0.6.3
 
