@@ -1,0 +1,6 @@
+# System dependencies for Streamlit Cloud
+# This file tells Streamlit Cloud which apt packages to install
+
+# For lxml
+libxml2-dev
+libxslt-dev
