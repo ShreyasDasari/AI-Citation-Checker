@@ -377,23 +377,41 @@ def render_homepage(settings: Settings):
                     st.session_state.model_preset = preset
                 
                 with col_opt2:
-                    # Show current model status
-                    if st.session_state.current_analyzer:
-                        model_info = st.session_state.current_analyzer.api_provider.get_current_model_info()
-                        if model_info['rate_limited']:
-                            st.error(f"Current model: {model_info['name']} (Rate Limited)")
-                        else:
-                            st.success(f"Current model: {model_info['name']}")
+                    # # Show current model status
+                    # if st.session_state.current_analyzer:
+                    #     model_info = st.session_state.current_analyzer.api_provider.get_current_model_info()
+                    #     if model_info['rate_limited']:
+                    #         st.error(f"Current model: {model_info['name']} (Rate Limited)")
+                    #     else:
+                    #         st.success(f"Current model: {model_info['name']}")
                     
-                    # Manual model selection
+                    # # Manual model selection
+                    # selected_model = st.selectbox(
+                    #     "Preferred Model",
+                    #     options=list(AVAILABLE_MODELS.keys()),
+                    #     format_func=lambda x: AVAILABLE_MODELS[x]['name'],
+                    #     index=list(AVAILABLE_MODELS.keys()).index(st.session_state.preferred_model),
+                    #     help="Select your preferred model (auto-fallback enabled)"
+                    # )
+                    # st.session_state.preferred_model = selected_model
+                    available_models = list(AVAILABLE_MODELS.keys())
+                    preferred_model = st.session_state.get("preferred_model", available_models[0])
+
+                    # Reset to default if preferred_model is missing
+                    if preferred_model not in available_models:
+                        preferred_model = available_models[0]
+                        st.session_state.preferred_model = preferred_model
+
                     selected_model = st.selectbox(
                         "Preferred Model",
-                        options=list(AVAILABLE_MODELS.keys()),
+                        options=available_models,
                         format_func=lambda x: AVAILABLE_MODELS[x]['name'],
-                        index=list(AVAILABLE_MODELS.keys()).index(st.session_state.preferred_model),
-                        help="Select your preferred model (auto-fallback enabled)"
+                        index=available_models.index(preferred_model),
+                        help="Select your preferred model (auto-fallback if unavailable)"
                     )
+
                     st.session_state.preferred_model = selected_model
+
                 
                 # Model status display
                 if st.checkbox("Show all models status", value=False):
