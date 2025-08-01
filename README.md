@@ -12,7 +12,7 @@ A clean, professional web application for analyzing and improving academic citat
 Experience Psyte in action:
 
 - 🔗 **Try the App**: [https://psytee.streamlit.app/](https://psytee.streamlit.app/)
-- 🎥 **Watch the Product Trailer**: [https://youtu.be/cs_QpzKBQ-E](https://youtu.be/cs_QpzKBQ-E)
+- 🎥 **Watch the App Trailer**: [https://youtu.be/cs_QpzKBQ-E](https://youtu.be/cs_QpzKBQ-E)
 
 ## Key Features
 
