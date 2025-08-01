@@ -6,18 +6,15 @@ A clean, professional web application for analyzing and improving academic citat
 ![Streamlit](https://img.shields.io/badge/streamlit-v1.29.0-red.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-## Key Features at a Glance
 
-✅ **AI-Powered Analysis** - Google Gemini AI for intelligent citation checking  
-✅ **Multi-Model Support** - 8 AI models with automatic fallback for uninterrupted service  
-✅ **Accurate Detection** - Supports APA, MLA, Chicago, Harvard, and IEEE styles  
-✅ **Web Search Integration** - Searches CrossRef, arXiv, and Semantic Scholar  
-✅ **Missing Citation Detection** - Identifies statements needing references  
-✅ **Multiple Formats** - Supports PDF, DOCX, TXT, and Markdown files  
-✅ **Professional UI** - Clean navigation bar and colorful design  
-✅ **Robust API Handling** - Automatic retries and timeout management
+## Live Demo and Trailer
 
-## Features
+Experience Psyte in action:
+
+- 🔗 **Try the App**: [https://psytee.streamlit.app/](https://psytee.streamlit.app/)
+- 🎥 **Watch the Product Trailer**: [https://youtu.be/cs_QpzKBQ-E](https://youtu.be/cs_QpzKBQ-E)
+
+## Key Features
 
 - **Clean Interface**: Google-inspired minimalist design with excellent dark mode support
 - **Multiple Input Methods**: Paste text directly or upload files (PDF, DOCX, TXT, Markdown)
