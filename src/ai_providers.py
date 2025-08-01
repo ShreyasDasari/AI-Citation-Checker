@@ -40,31 +40,31 @@ class GeminiProvider(AIProvider):
     # Available models in order of preference (fallback order)
     AVAILABLE_MODELS = [
         {
-            'name': 'gemini-2.0-flash-exp',
+            'name': 'gemini-2.5-flash-lite',
             'description': 'Latest experimental flash model',
             'max_tokens': 1000,
             'temperature': 0.3
         },
         {
-            'name': 'gemini-1.5-flash',
+            'name': 'gemini-2.5-flash',
             'description': 'Fast and efficient model',
             'max_tokens': 1000,
             'temperature': 0.3
         },
         {
-            'name': 'gemini-1.5-flash-8b',
+            'name': 'gemini-2.0-flash-lite',
             'description': 'Lightweight flash model',
             'max_tokens': 1000,
             'temperature': 0.3
         },
         {
-            'name': 'gemini-1.5-pro',
+            'name': 'gemini-2.0-flash',
             'description': 'High quality model',
             'max_tokens': 1000,
             'temperature': 0.3
         },
         {
-            'name': 'gemini-1.0-pro',
+            'name': 'gemini-2.5-pro',
             'description': 'Previous generation model',
             'max_tokens': 1000,
             'temperature': 0.3
@@ -216,7 +216,7 @@ class GeminiProvider(AIProvider):
         try:
             # System instruction for citation analysis
             system_prompt = """You are an expert citation analyst. Analyze citations for:
-            1. Format correctness according to citation styles (APA, MLA, Chicago, Harvard)
+            1. Format correctness according to citation styles (APA, MLA, Chicago, Harvard and all other styles)
             2. Completeness of information (author, year, title, source, etc.)
             3. Common formatting errors and issues
             4. Specific improvements that would make the citation correct
