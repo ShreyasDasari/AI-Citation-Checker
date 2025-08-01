@@ -46,7 +46,7 @@ class GeminiProvider(AIProvider):
             'temperature': 0.3
         },
         {
-            'name': 'gemini-2.5-flash',
+            'name': 'gemini-2.5-pro',
             'description': 'Fast and efficient model',
             'max_tokens': 1000,
             'temperature': 0.3
@@ -58,13 +58,13 @@ class GeminiProvider(AIProvider):
             'temperature': 0.3
         },
         {
-            'name': 'gemini-2.0-flash',
+            'name': 'gemini-2.5-flash',
             'description': 'High quality model',
             'max_tokens': 1000,
             'temperature': 0.3
         },
         {
-            'name': 'gemini-2.5-pro',
+            'name': 'gemini-2.0-flash',
             'description': 'Previous generation model',
             'max_tokens': 1000,
             'temperature': 0.3
